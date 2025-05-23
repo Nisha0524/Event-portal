@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Projects & Portfolio</title>
+  
+  <!-- Bringing in Bootstrap and icons. Might add AOS later -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Nav: probably needs collapsing behavior cleaned up on mobile -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navLinks">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bio">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reachout">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero banner area -->
+  <section id="home" class="container-fluid bg-primary text-light text-center p-5 mt-5">
+    <h1 class="display-5">Hi there, I build websites</h1>
+    <p class="lead">Mainly Bootstrap for now — maybe React next?</p>
+    <button class="btn btn-outline-light">Download Resume</button>
+  </section>
+
+  <!-- Bio Section -->
+  <section id="bio" class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <img src="assets/Profile.jpeg" alt="Profile photo" class="img-fluid rounded-circle shadow-sm" />
+      </div>
+      <div class="col-md-8">
+        <h2>A Little Bit About Me</h2>
+        <p class="text-muted">Web dev nerd here. I dig clean UIs and accessible design.</p>
+        <ul>
+          <li><i class="bi bi-check2-circle text-success"></i> Bootstrap & grid systems? Love them.</li>
+          <li><i class="bi bi-check2-circle text-success"></i> Obsessive about responsive layouts</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+ <!-- Portfolio showcase — more projects coming soon... maybe -->
+<section id="portfolio" class="container py-5">
+  <h2 class="text-center mb-4">Projects I've Worked On</h2>
+  <div class="row">
+    <!-- Just one for now, will add others once I polish them -->
+    <div class="col-md-4">
+      <div class="card shadow-sm mb-4">
+        <!-- I should probably compress this image before pushing -->
+        <img src="assets/e commerce.jpg" class="card-img-top" alt="Preview of e-commerce site" />
+        <div class="card-body">
+          <h5 class="card-title">E-Commerce UI Concept</h5>
+          <p class="card-text">A simple e-commerce layout I put together. It's mostly front-end, nothing too dynamic yet.</p>
+          <!-- Should eventually link to GitHub or a live demo -->
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">See Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact form section -->
+  <section id="reachout" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Let's Chat</h2>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Your Name" required />
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Email Address" required />
+        </div>
+        <div class="col-12">
+          <textarea class="form-control" rows="4" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-success">Send</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer with social links, might want to use Font Awesome later -->
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    <p>Follow me around the web:
+      <a href="https://twitter.com/YOUR_USERNAME" target="_blank"><i class="bi bi-twitter mx-2 text-white"></i></a>
+      <a href="https://www.linkedin.com/in/nisha-d-j-924b082a1" target="_blank"><i class="bi bi-linkedin mx-2 text-white"></i></a>
+      <a href="https://github.com/Nisha0524" target="_blank"><i class="bi bi-github mx-2 text-white"></i></a>
+    </p>
+    <p class="mb-0">© 2025 Frontend Developer — all hands coded with care</p>
+  </footer>
+
+  <!-- Project Modal -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">More on This Project</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Quick rundown: this project uses Bootstrap and vanilla JS. Might redo it in Vue later.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts (Bootstrap bundle includes Popper.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

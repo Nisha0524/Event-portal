@@ -1,0 +1,17 @@
+/* trying to get smooth scrolling working, should test on Safari too */
+body {
+  scroll-behavior: smooth;
+}
+
+/* give project titles a bit more visual weight */
+.card-title {
+  font-weight: 700; /* same as bold but I prefer numeric */
+}
+
+/* maybe change this color later — it's kinda bright? */
+footer i:hover {
+  color: #0dcaf0;
+  cursor: pointer;  /* makes icons feel clickable */
+}
+
+/* TODO: Might need to add media queries for smaller screens */
