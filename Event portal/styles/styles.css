@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  /* Navigation */
+nav {
+  background: #8c8a8c;
+  padding: 1em;
+  text-align: center; /* Changed from center to right */
+}
+nav {
+  background: #8e878e;
+  padding: 1em 2em;
+  text-align: center;
+}
+
+  nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  figure {
+  text-align: center;
+  margin: 10px;
+}
+
+figcaption {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+  
+  /* Header Banner */
+  #welcomeBanner {
+    background: #53a6f8;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  .highlight {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Event Cards */
+  #eventList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+  }
+  .eventCard {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 1em;
+    width: calc(33% - 2em);
+  }
+  
+  /* Form */
+  form {
+    background: white;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 8px;
+  }
+  form input, form select, form textarea, form button {
+    display: block;
+    margin: 0.5em 0;
+    width: 100%;
+    padding: 0.5em;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: #222;
+    color: white;
+  }
+  

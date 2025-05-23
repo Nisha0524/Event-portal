@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Community Event Portal</title>
+  <!-- Linking our stylesheet, might split into multiple later -->
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <!-- Basic site nav — keeping it minimal for now -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+    <a href="help.html" target="_blank">Help</a> <!-- Opens help in new tab -->
+  </nav>
+
+  <!-- Welcome section — could use a background image or something eventually -->
+  <header id="home">
+    <h1 id="welcomeBanner">Welcome to the Community Event Portal</h1>
+    <p><span class="highlight">Special Offer:</span> Free registration for the first 100 users!</p>
+  </header>
+
+  <!-- Placeholder Gallery of Previous Events — TODO: maybe make a carousel -->
+  <section id="gallery">
+    <h2>Past Events Gallery</h2>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <!-- These could use lazy loading -->
+      <figure>
+        <img src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2018/06/18100559/Music.png" alt="Sound Party" width="200">
+        <figcaption>Sound Party</figcaption>
+      </figure>
+      <figure>
+        <img src="https://acorn.works/wp-content/uploads/2022/07/consultant-running-a-small-workshop-with-a-team-of-employees-scaled.jpg" alt="Code & Fix" width="200">
+        <figcaption>Code & Fix</figcaption>
+      </figure>
+      <figure>
+        <img src="https://focus.hidubai.com/content/images/size/w1000/2024/07/Untitled-design---2024-07-15T094213.038.jpg" alt="Food Fest" width="200">
+        <figcaption>Food Fest</figcaption>
+      </figure>
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtuWIj3RwBRxT1-oFOwg3wRoh4PcCzWPpHjw&s" alt="Healthy Diet" width="200">
+        <figcaption>Healthy Diet</figcaption>
+      </figure>
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxBDXvpYq3SLNn9_iNEmGCglT_mAq0Lgvsg&s" alt="Book Fair" width="200">
+        <figcaption>Book Fair</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Upcoming Events Section - basic flex layout for now -->
+  <section id="upcoming" class="container py-5">
+    <h2 class="text-center mb-4">What's Coming Up</h2>
+
+    <!-- Using inline styles just to get things up and running -->
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; padding: 2rem;">
+      
+      <!-- Yoga Event -->
+      <div style="width: 300px; border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
+        <img src="assets/yoga.jpeg" alt="Relaxing Yoga Workshop" style="width: 100%;" />
+        <div style="padding: 1rem;">
+          <h4>Mindful Yoga Morning</h4>
+          <p>Stretch it out with some simple poses and easy breathing exercises. Seriously, anyone can join.</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+
+      <!-- Bharatanatyam — remember to fix the space in image filename later -->
+      <div style="width: 300px; border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
+        <img src="assets/bharatha%20natiyam.jpeg" alt="Classical Bharatanatyam Dance" style="width: 100%;" />
+        <div style="padding: 1rem;">
+          <h4>Bharatanatyam Basics</h4>
+          <p>We'll go through some traditional moves and the stories behind them. Good for beginners.</p>
+          <button>Details & Timing</button>
+        </div>
+      </div>
+
+      <!-- Folk Dance -->
+      <div style="width: 300px; border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
+        <img src="assets/Dance.jpeg" alt="Colorful Indian Folk Dance" style="width: 100%;" />
+        <div style="padding: 1rem;">
+          <h4>Rhythms of Folk</h4>
+          <p>This one's going to be fun — energetic moves and cool stories from across the country.</p>
+          <button>Details & Timing</button>
+        </div>
+      </div>
+      <!-- Singing Competitions -->
+<div style="width: 300px; border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
+  <img src="assets/singing.jpeg" alt="Singing Competition" style="width: 100%;" />
+  <div style="padding: 1rem;">
+    <h4>Singing Competitions</h4>
+    <p>Showcase your vocal talents and compete with others. Open to all skill levels.</p>
+    <button>Details & Timing</button>
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- Events list container - this will be populated dynamically -->
+  <section id="events">
+    <div id="eventList"></div>
+  </section>
+
+  <!-- Registration Form — maybe add validation later -->
+  <section id="register">
+    <h2>Register for an Event</h2>
+    <form id="eventForm">
+      <input type="text" name="name" placeholder="Your Name" required autofocus>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="date" name="date" required>
+      <select name="type">
+        <option value="music">Music</option>
+        <option value="tech">Tech</option>
+        <!-- Might add more types later -->
+      </select>
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit">Submit</button>
+      <output id="formOutput"></output>
+    </form>
+  </section>
+
+  <!-- Video Block — kept simple, may need better fallback later -->
+  <div class="video-container" style="position: relative; max-width: 400px; width: 100%; aspect-ratio: 1 / 1; margin: 2rem auto; background-color: #000;">
+    <video autoplay muted loop controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+      <source src="assets/promo.mp4" type="video/mp4" />
+      <!-- Might not work on some browsers, oh well -->
+      Your browser doesn’t support video playback. Try using Chrome?
+    </video>
+  </div>
+
+  <!-- Footer bit -->
+  <footer id="contact">
+    <p>&copy; 2025 Made with ❤️ by Nisha</p>
+  </footer>
+
+  <!-- Scripts file — currently just handling form probably -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>
